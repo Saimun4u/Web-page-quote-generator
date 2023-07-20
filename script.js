@@ -1,3 +1,7 @@
+let quoteDisplay = document.getElementById('quote');
+let authorDisplay = document.getElementById('author');
+const quoteBtn = document.getElementById('genQuote');
+
 function generateQuote() {
   const quotes = {
     '- Alysha Speer':
@@ -22,5 +26,8 @@ function generateQuote() {
 
   let quote = quotes[author];
 
-  console.log(sayings);
+  authorDisplay.innerHTML = `${author}`;
+  quoteDisplay.innerHTML = `${quote}`;
 }
+
+quoteBtn.addEventListener('click', generateQuote);
